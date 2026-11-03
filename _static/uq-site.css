@@ -1,0 +1,178 @@
+/* UQ course site styling over the Jupyter Book theme. */
+:root {
+  --uq-purple: #51247a;
+  --uq-magenta: #962a8b;
+  --uq-ink: #2b1d37;
+  --uq-tint: #f5f0f8;
+}
+
+html[data-theme="light"] {
+  --pst-color-primary: var(--uq-purple);
+  --pst-color-secondary: var(--uq-magenta);
+  --pst-color-link: var(--uq-purple);
+  --pst-color-link-hover: #74206b;
+  --pst-color-text-base: var(--uq-ink);
+}
+
+html[data-theme="dark"] {
+  --pst-color-primary: #dcc5f1;
+  --pst-color-secondary: #f0afe9;
+  --pst-color-link: #dcc5f1;
+  --pst-color-link-hover: #f0afe9;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+#pst-header {
+  display: none;
+}
+
+.bd-header-article {
+  background: var(--uq-purple) !important;
+  border-bottom: 4px solid var(--uq-magenta);
+  color: #fff;
+}
+
+.bd-header-article .btn,
+.bd-header-article .pst-navbar-icon,
+.bd-header-article .search-button-field {
+  color: #fff;
+}
+
+.bd-header-article .search-button-field {
+  border-color: rgb(255 255 255 / 45%);
+  background: rgb(255 255 255 / 10%);
+}
+
+.bd-header-article .search-button-field:hover,
+.bd-header-article .search-button-field:focus-visible {
+  background: rgb(255 255 255 / 22%);
+}
+
+html[data-theme="light"] .bd-sidebar-primary {
+  background: #fbf9fc;
+  border-right: 1px solid #e9dfef;
+}
+
+.navbar-brand.logo {
+  align-items: flex-start;
+  padding: 1rem 0 1.2rem;
+  border-bottom: 3px solid var(--uq-magenta);
+}
+
+.navbar-brand.logo .logo__image {
+  width: min(100%, 230px);
+  height: auto;
+}
+
+.navbar-brand.logo .logo__title {
+  color: var(--uq-ink);
+  font-size: 0.94rem;
+  font-weight: 700;
+  line-height: 1.35;
+  text-align: left;
+}
+
+html[data-theme="dark"] .navbar-brand.logo .logo__image {
+  filter: brightness(0) invert(1);
+}
+
+html[data-theme="dark"] .navbar-brand.logo .logo__title,
+html[data-theme="dark"] .bd-sidebar-primary .bd-links .caption-text,
+html[data-theme="dark"] .bd-article h2,
+html[data-theme="dark"] .bd-article h3 {
+  color: #dcc5f1;
+}
+
+html[data-theme="dark"] .bd-article blockquote {
+  background: #362545;
+  color: #f7f1fb;
+}
+
+html[data-theme="dark"] .bd-sidebar-primary .bd-links a:hover,
+html[data-theme="dark"] .bd-sidebar-primary .bd-links .active > a {
+  color: #dcc5f1;
+}
+
+html[data-theme="dark"] .bd-sidebar-primary .search-button-field {
+  color: #f7f1fb !important;
+  border-color: #665773 !important;
+  background-color: #251c2e !important;
+}
+
+.bd-sidebar-primary .bd-links .caption-text {
+  color: var(--uq-purple);
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.bd-sidebar-primary .bd-links a:hover,
+.bd-sidebar-primary .bd-links .active > a {
+  color: var(--uq-purple);
+}
+
+.bd-article {
+  line-height: 1.7;
+}
+
+.bd-article section > h1:first-child {
+  margin: 0 0 1.6rem;
+  padding: clamp(1.35rem, 3vw, 2.1rem);
+  border-radius: 0 0 1.1rem 0;
+  background: linear-gradient(115deg, var(--uq-purple) 0%, var(--uq-purple) 72%, var(--uq-magenta) 100%);
+  color: #fff;
+  font-size: clamp(2rem, 3.2vw, 2.7rem);
+  line-height: 1.16;
+}
+
+.bd-article section > h1:first-child .headerlink {
+  color: #fff;
+}
+
+.bd-article h2,
+.bd-article h3 {
+  color: var(--uq-purple);
+}
+
+.bd-article h2 {
+  margin-top: 2.4rem;
+  padding-bottom: 0.3rem;
+  border-bottom: 1px solid #e6ddeb;
+}
+
+.bd-article blockquote {
+  margin: 1.5rem 0;
+  padding: 1rem 1.2rem;
+  border-left: 5px solid var(--uq-magenta);
+  border-radius: 0 0.55rem 0.55rem 0;
+  background: var(--uq-tint);
+  color: var(--uq-ink);
+}
+
+.bd-article blockquote p:last-child {
+  margin-bottom: 0;
+}
+
+.bd-article a:not(.headerlink) {
+  text-underline-offset: 0.16em;
+}
+
+.bd-article a:focus-visible,
+.bd-sidebar-primary a:focus-visible {
+  outline: 3px solid var(--uq-magenta);
+  outline-offset: 3px;
+}
+
+#ethical-ad-placement {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .bd-article section > h1:first-child {
+    padding: 1.25rem;
+    font-size: 2rem;
+  }
+}
