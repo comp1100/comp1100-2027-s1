@@ -61,7 +61,15 @@ body {
 
 /* The theme wires the header toggle; show it and remove its inert duplicate. */
 #pst-header .primary-toggle {
-  display: block !important;
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+  line-height: 1;
+}
+
+#pst-header .primary-toggle::before {
+  left: 8px;
+  right: 8px;
 }
 
 .bd-header-article .primary-toggle {
