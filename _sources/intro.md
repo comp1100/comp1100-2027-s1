@@ -1,6 +1,6 @@
 # Course overview
 
-> **Draft placeholder.** This site is being prepared for the evolved COMP1100/COMP7110 course. The current [course site](https://comp1100.github.io/intro.html) remains the live student resource until the new course is ready.
+> **Draft placeholder.** This site is being prepared for COMP1100 in Semester 1, 2027. The current [course site](https://comp1100.github.io/intro.html) remains the live student resource until the new course is ready.
 
 ## What is this course about?
 

@@ -26,7 +26,36 @@ body {
 }
 
 #pst-header {
-  display: none;
+  background: var(--uq-purple) !important;
+  border-bottom: 4px solid var(--uq-magenta);
+  color: #fff;
+}
+
+#pst-header .logo__image {
+  filter: brightness(0) invert(1);
+  width: 150px;
+  height: auto;
+}
+
+#pst-header .logo__title {
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+#pst-header .btn,
+#pst-header .pst-navbar-icon,
+#pst-header .search-button-field {
+  color: #fff;
+}
+
+/* The theme wires the header toggle; show it and remove its inert duplicate. */
+#pst-header .primary-toggle {
+  display: block !important;
+}
+
+.bd-header-article .primary-toggle {
+  display: none !important;
 }
 
 .bd-header-article {
