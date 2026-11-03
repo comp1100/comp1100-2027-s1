@@ -32,9 +32,14 @@ body {
 }
 
 #pst-header .logo__image {
-  filter: brightness(0) invert(1);
-  width: 150px;
-  height: auto;
+  display: none;
+}
+
+#pst-header .navbar-brand.logo {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  justify-content: center;
 }
 
 #pst-header .logo__title {
@@ -49,6 +54,11 @@ body {
   color: #fff;
 }
 
+#pst-header .search-button-field {
+  border: 1px solid rgb(255 255 255 / 45%);
+  background: rgb(255 255 255 / 12%);
+}
+
 /* The theme wires the header toggle; show it and remove its inert duplicate. */
 #pst-header .primary-toggle {
   display: block !important;
@@ -58,26 +68,42 @@ body {
   display: none !important;
 }
 
+/* On wide screens the theme moves the hidden sidebar into the page margin. */
+#pst-primary-sidebar.pst-sidebar-hidden {
+  visibility: hidden;
+  pointer-events: none;
+}
+
 .bd-header-article {
-  background: var(--uq-purple) !important;
-  border-bottom: 4px solid var(--uq-magenta);
-  color: #fff;
+  background: #fff !important;
+  border-bottom: 1px solid #e6ddeb;
+  color: var(--uq-purple);
 }
 
 .bd-header-article .btn,
 .bd-header-article .pst-navbar-icon,
 .bd-header-article .search-button-field {
-  color: #fff;
+  color: var(--uq-purple);
 }
 
 .bd-header-article .search-button-field {
-  border-color: rgb(255 255 255 / 45%);
-  background: rgb(255 255 255 / 10%);
+  border-color: #ded3e8;
+  background: #f9f6fb;
 }
 
 .bd-header-article .search-button-field:hover,
 .bd-header-article .search-button-field:focus-visible {
-  background: rgb(255 255 255 / 22%);
+  background: #eee5f3;
+}
+
+html[data-theme="dark"] .bd-header-article {
+  background: #141018 !important;
+  border-bottom-color: #4a365b;
+}
+
+html[data-theme="dark"] .bd-header-article .btn,
+html[data-theme="dark"] .bd-header-article .pst-navbar-icon {
+  color: #dcc5f1;
 }
 
 html[data-theme="light"] .bd-sidebar-primary {
@@ -102,6 +128,10 @@ html[data-theme="light"] .bd-sidebar-primary {
   font-weight: 700;
   line-height: 1.35;
   text-align: left;
+}
+
+#pst-primary-sidebar .navbar-brand.logo .logo__title {
+  display: none;
 }
 
 html[data-theme="dark"] .navbar-brand.logo .logo__image {
